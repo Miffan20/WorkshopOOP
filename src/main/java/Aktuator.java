@@ -15,14 +15,7 @@ public class Aktuator {
         this.value = value;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "Aktuator{" +
-                "value=" + value +
-                '}';
-    }
+    
 
 
 }
