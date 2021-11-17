@@ -1,6 +1,6 @@
 public class Co2Sensor extends Sensor {
 
-    public TemperaturSensor(double value) {
+    public Co2Sensor(double value) {
         super(value);
 
     }
