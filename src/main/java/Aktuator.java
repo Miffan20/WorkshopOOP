@@ -10,6 +10,7 @@ public class Aktuator {
     public void setValue(double value) {
         this.value = value;
     }
+<<<<<<< Updated upstream
 
     public Aktuator(double value) {
         this.value = value;
@@ -18,4 +19,6 @@ public class Aktuator {
     
 
 
+=======
+>>>>>>> Stashed changes
 }
