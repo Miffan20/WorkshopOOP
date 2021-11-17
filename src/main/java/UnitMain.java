@@ -1,6 +1,22 @@
+import java.util.UUID;
+
 public class UnitMain {
-    public static void main(String[] args) {
-        System.out.println("Hello world");
+
+
+    private UUID id;
+    private String name;
+
+
+    public UUID getId() {
+        return id;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String toString() {
+
+        return null;
     }
 
 }
