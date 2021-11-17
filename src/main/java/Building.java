@@ -10,8 +10,8 @@ public class Building extends UnitMain {
 
     //Constructor
 
-    public Building(UUID id, ArrayList<Sensor> sensors, ArrayList<Aktuator> actuators) {
-        super(id);
+    public Building(UUID id,String name,  ArrayList<Sensor> sensors, ArrayList<Aktuator> actuators) {
+        super(id, name);
         this.sensors = sensors;
         this.actuators = actuators;
     }
