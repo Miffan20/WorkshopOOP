@@ -4,21 +4,19 @@ public class UnitMain {
 
 
     private UUID id;
-    public String name;
+    private String name;
 
 
-    public String getName();{
-
+    public UUID getId() {
+        return id;
     }
-
-    public UUID getUUID() {
-
-    }
-
-
     
-
+    public void setName(String name) {
+        this.name = name;
+    }
     public String toString() {
 
+        return null;
     }
+
 }
