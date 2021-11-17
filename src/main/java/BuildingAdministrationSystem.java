@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class BuildingAdministrationSystem extends Building{
+public class BuildingAdministrationSystem{
 
     List<Building> buildings;
 
@@ -17,7 +17,8 @@ public class BuildingAdministrationSystem extends Building{
     public List<Building> getBuildings() {
         return buildings;
     }
-    public UUID addBuilding(Building name){
+    public void addBuilding(Building name){
+
         buildings.add(name);
     }
 

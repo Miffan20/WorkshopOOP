@@ -1,19 +1,21 @@
 
 import java.util.ArrayList;
+import java.util.UUID;
 
-public class Building extends Unit {
+public class Building extends UnitMain {
 
     // Attributes
     private ArrayList<Sensor> sensors= new ArrayList<Sensor>(); // ArrayList for sensor
     private ArrayList<Aktuator> actuators = new ArrayList<Aktuator>(); //ArrayList for actuators
-    private Object TemperaturSensor;
 
     //Constructor
 
-    public Building(ArrayList<Sensor> sensors, ArrayList<Aktuator> actuators) {
+    public Building(UUID id, ArrayList<Sensor> sensors, ArrayList<Aktuator> actuators) {
+        super(id);
         this.sensors = sensors;
         this.actuators = actuators;
     }
+
 
 
     //methods:
@@ -24,7 +26,7 @@ public class Building extends Unit {
     }
 
     public void addCo2Sensor(Co2Sensor acs1){
-        actuators.add(acs1);
+        sensors.add(acs1);
     }
     
     //remove
@@ -34,7 +36,7 @@ public class Building extends Unit {
     }
 
     public void removeSensor(Co2Sensor rcs1){
-        actuators.remove(rcs1);
+        sensors.remove(rcs1);
     }
 
     //remove
