@@ -1,8 +1,12 @@
+import rd01.oop.workshop.acquaintance.IBuildingManagementSystem;
+
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Map;
 import java.util.UUID;
 
-public class UnitMain {
+public class UnitMain implements IBuildingManagementSystem {
+
 
 
     private UUID id;
@@ -15,7 +19,6 @@ public class UnitMain {
     }
 
 
-
     public UUID getId() {
         return id;
     }
@@ -23,9 +26,9 @@ public class UnitMain {
     public void setName(String name) {
         this.name = name;
 
-        }
+    }
 
-        @Override
+    @Override
     public String toString() {
 
         return name;
@@ -34,18 +37,18 @@ public class UnitMain {
     public static void main(String[] args) {
 
         // create UUID
-        UUID u1 = new UUID(33l,22l);
+        UUID u1 = new UUID(33l, 22l);
         //create area/unitMain
         UnitMain i1 = new UnitMain(u1, "Tek");
 
         //create arraylists for sensors and actuators
 
-       ArrayList<Sensor> Slist = new ArrayList<>();
-       ArrayList<Aktuator> Alist = new ArrayList<>();
+        ArrayList<Sensor> Slist = new ArrayList<>();
+        ArrayList<Aktuator> Alist = new ArrayList<>();
 
         //create building
 
-        Building b1 = new Building(u1, "tek",Slist,Alist);
+        Building b1 = new Building(u1, "tek", Slist, Alist);
 
         //add building to buildingadministationsystem
 
@@ -57,16 +60,16 @@ public class UnitMain {
 
         //create sensors
 
-        Co2Sensor c1 = new Co2Sensor(25,"c1");
+        Co2Sensor c1 = new Co2Sensor(25, "c1");
 
         //create actuators
-        
+
         b1.addCo2Sensor(c1);
 
         System.out.println(b1.getSensors() + "\n");
 
 
-        b1.removeSensor(c1 );
+        b1.removeSensor(c1);
 
         System.out.println(b1.getSensors());
 
@@ -89,8 +92,45 @@ public class UnitMain {
         System.out.println(b1.getActuators());
 
 
+    }
 
+    @Override
+    public Map<UUID, String> getBuildingInformation() {
+        return null;
+    }
+
+    @Override
+    public Map<UUID, String> getSensorInformation(UUID buildingId) {
+        return null;
+    }
+
+    @Override
+    public Map<UUID, String> getActuatorInformation(UUID buildingId) {
+        return null;
+    }
+
+    @Override
+    public UUID addTemperatureSensor(UUID buildingId, String name) {
+        return null;
+    }
+
+    @Override
+    public UUID addCo2Sensor(UUID buildingId, String name) {
+        return null;
+    }
+
+    @Override
+    public void removeSensor(UUID buildingId, UUID sensorId) {
 
     }
 
+    @Override
+    public UUID addVentilationActuator(UUID buildingId, String name) {
+        return null;
+    }
+
+    @Override
+    public void removeActuator(UUID buildingId, UUID actuatorId) {
+
+    }
 }
