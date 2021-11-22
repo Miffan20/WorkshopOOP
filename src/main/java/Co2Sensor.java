@@ -1,7 +1,9 @@
 public class Co2Sensor extends Sensor {
 
-    public Co2Sensor(double value) {
-        super(value);
+
+    public Co2Sensor(double value, String name) {
+        super(value, name);
+
 
     }
 
@@ -11,6 +13,12 @@ public class Co2Sensor extends Sensor {
         System.out.println(getValue() + " CO2 Parts per million");
 
     }
+
+    public String getName(){
+        return name;
+    }
+
+
 }
 
 

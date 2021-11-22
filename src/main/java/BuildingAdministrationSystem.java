@@ -8,8 +8,7 @@ public class BuildingAdministrationSystem{
     List<Building> buildings;
 
 //constructor
-    public BuildingAdministrationSystem(List<Building> buildings) {
-        this.buildings = buildings;
+    public BuildingAdministrationSystem() {
         buildings= new ArrayList<Building>();
 }
 
@@ -25,4 +24,7 @@ public class BuildingAdministrationSystem{
     public void removeBuilding(UUID id){
         buildings.remove(id);
     }
+
+
+
 }

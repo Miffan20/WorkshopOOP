@@ -3,8 +3,8 @@
 public class TemperaturSensor extends Sensor{
 
 
-    public TemperaturSensor(double value) {
-        super(value);
+    public TemperaturSensor(double value, String name) {
+        super(value, name);
 
     }
 

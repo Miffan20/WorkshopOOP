@@ -28,6 +28,8 @@ public class Building extends UnitMain {
     public void addCo2Sensor(Co2Sensor acs1){
         sensors.add(acs1);
     }
+
+    public void addActuator(Aktuator actuator){ actuators.add(actuator);}
     
     //remove
 
@@ -39,6 +41,7 @@ public class Building extends UnitMain {
         sensors.remove(rcs1);
     }
 
+    public void removeActuator(Aktuator actuator){ actuators.remove(actuator);}
     //remove
 
     //Getter 'n' Setters
