@@ -37,9 +37,10 @@ public class UnitMain implements IBuildingManagementSystem {
     public static void main(String[] args) {
 
         // create UUID
-        UUID u1 = new UUID(33l, 22l);
+
+        //UUID for building 1
+        UUID u1 = new UUID(33l, 33l);
         //create area/unitMain
-        UnitMain i1 = new UnitMain(u1, "Tek");
 
         //create arraylists for sensors and actuators
 
